@@ -1,6 +1,7 @@
-header{
-  height: 400px;
+.Profile{
+  height: 600px;
   width: 100%;
+  padding-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
