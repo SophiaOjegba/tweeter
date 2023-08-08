@@ -1,0 +1,11 @@
+header{
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: khaki;
+  background-color: #878c00;
+  background-image: url(http://www.transparenttextures.com/patterns/escheresque-dark.png);
+ }

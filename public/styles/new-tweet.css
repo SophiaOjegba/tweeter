@@ -1,0 +1,36 @@
+.new-tweet {
+  margin: 0 auto;
+}
+.new-tweet-textarea {
+  border: 0;
+  border-width: auto;
+  border-bottom: 2px solid #000306;
+  background-color: transparent;
+  width: 100%;
+}
+.counter {
+  margin-left: 45%;
+  font-family: Bungee;
+}
+
+.new-tweet-button{
+  margin: 0 auto;
+  display: flex;
+}
+
+.tweet-button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  margin-right: 40%;
+  font-family: Bungee;
+  
+}
+
+.tweet-button:hover {
+  background-color: red; 
+  
+}
+.new-tweet h2 {
+  font-size: 2em; 
+  font-weight: bold;
+}
