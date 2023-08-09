@@ -36,9 +36,11 @@ body {
   border: 2px solid #000306;
   padding: 1.5em;
   padding-bottom: 0;
-  
-  
  }
+
+.tweetArticle {
+  border: 2px solid #000306;
+}
 
  #profile-name {
   color: rgb(166, 162, 162);
