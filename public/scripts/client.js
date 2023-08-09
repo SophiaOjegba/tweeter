@@ -39,7 +39,7 @@ $(()=>{
   
   const createTweetElement = function(tweet) {
   let $tweet = `
-    <article>
+    <article class="tweetArticle">
     <header class="old-tweets-header">
       <div class="profile-picture">
       <img src="${tweet.user.avatars}" alt="avatar">
@@ -51,14 +51,14 @@ $(()=>{
       <p id="tweet-text" class="new-tweet-textarea">${tweet.content.text}</p>
   
     <footer class="old-tweets-footer">
-      <p>${tweet.created_at}</p>
+      <p id = "formattedTime">${formatDate(tweet.created_at)}</p>
       <div>
       <i class="fa-solid fa-flag" id="tweet-icons"></i>
       <i class="fa-solid fa-retweet" id="tweet-icons"></i>
       <i class="fa-solid fa-heart" id="tweet-icons"></i>
       </div>
     </footer>
-    </article>
+    </article> <br>
   `
   return $tweet;
   }
@@ -83,8 +83,6 @@ $(()=>{
       method: "GET",
       dataType: "json",
       url: 'http://localhost:8080/tweets',
-      // success ()
-      // renderTweets()
     })
     .done((tweetData)=>{
       console.log("this is tweet loaded", tweetData)
@@ -92,5 +90,11 @@ $(()=>{
     })
   }
   loadTweets();
+  
+  const formatDate = function (timeStamp) {
+    let date = new Date();
+    return timeago.format(timeStamp);
+    // $("#formattedTime").text = timeAgo;
+  }
 
 });
