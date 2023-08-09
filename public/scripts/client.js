@@ -67,34 +67,48 @@ $(()=>{
 
   const form = $('form');
   form.on("submit", function (event)  {
-    event.preventDefault();
-    console.log('form submission!');
-    const data =$( this ).serialize();
+  event.preventDefault();
+  console.log('form submission!');
+  
+  let validTweet = $("#tweet-text").val().length;
+  if (!validTweet) {
+    alert('Tweet is empty');
+    return false;
+  }
+  if ( validTweet > 140) {
+    alert('Tweet is too long');
+    return false;
+  }
+
+  const data =$( this ).serialize();
 
     $.ajax({
       type: "POST",
       url: '/tweets',
-      data: data,
+      data
+    })
+    .then(() => {
+      loadTweets()
     });
-
   });
+
   const loadTweets = function () {
     $.ajax({
       method: "GET",
       dataType: "json",
       url: 'http://localhost:8080/tweets',
     })
-    .done((tweetData)=>{
-      console.log("this is tweet loaded", tweetData)
+    .then((tweetData)=>{
       renderTweets(tweetData)
+      $("#tweet-text").val('');
+      $('.counter').val(140);
+      $(".tweetArticle").append(tweetData);
     })
   }
   loadTweets();
   
   const formatDate = function (timeStamp) {
-    let date = new Date();
     return timeago.format(timeStamp);
-    // $("#formattedTime").text = timeAgo;
   }
 
 });

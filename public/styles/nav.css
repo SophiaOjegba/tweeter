@@ -25,3 +25,17 @@ nav p {
   align-items: center;
   
 }
+
+#nav-icon {
+  color: red;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
