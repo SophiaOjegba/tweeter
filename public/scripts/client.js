@@ -1,9 +1,6 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 $(()=>{
+  $('.error-message').hide();
+  $('.new-tweet').hide();
   const data = [
     {
       "user": {
@@ -28,6 +25,12 @@ $(()=>{
       "created_at": 1461113959088
     }
   ]
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   
   const renderTweets = function(tweets) {
     $('.tweet-container').empty()
@@ -42,13 +45,13 @@ $(()=>{
     <article class="tweetArticle">
     <header class="old-tweets-header">
       <div class="profile-picture">
-      <img src="${tweet.user.avatars}" alt="avatar">
-      <p>${tweet.user.name}</p>   
+      <img src="${escape(tweet.user.avatars)}" alt="avatar">
+      <p>${escape(tweet.user.name)}</p>   
       </div>      
-      <p id="profile-name">${tweet.user.handle}</p>
+      <p id="profile-name">${escape(tweet.user.handle)}</p>
   
     </header>
-      <p id="tweet-text" class="new-tweet-textarea">${tweet.content.text}</p>
+      <p id="tweet-text" class="new-tweet-textarea">${escape(tweet.content.text)}</p>
   
     <footer class="old-tweets-footer">
       <p id = "formattedTime">${formatDate(tweet.created_at)}</p>
@@ -65,18 +68,34 @@ $(()=>{
   
   // renderTweets(data);
 
+  const composeTweet = $('.nav-button')
+  composeTweet.on('click', function () {
+    if ($('.new-tweet').is(":hidden")) {
+      $('.new-tweet').slideDown( "slow" );
+      $('form').slideup('slow');
+    }
+  })
+
   const form = $('form');
   form.on("submit", function (event)  {
   event.preventDefault();
   console.log('form submission!');
   
   let validTweet = $("#tweet-text").val().length;
-  if (!validTweet) {
-    alert('Tweet is empty');
+  
+  if (validTweet === 0) {
+    $(".error-message").html(
+      `<p><i class="fa-solid fa-triangle-exclamation"></i>Your tweet can not be empty<i class="fa-solid fa-triangle-exclamation"></i></p>`
+    );
+    $('.error-message').slideDown( "slow" );
     return false;
   }
+
   if ( validTweet > 140) {
-    alert('Tweet is too long');
+    $(".error-message").html(
+      `<p><i class="fa-solid fa-triangle-exclamation"></i>Your tweet is too long <i class="fa-solid fa-triangle-exclamation"></i></p>`
+    );
+    $('.error-message').slideDown( "slow" );
     return false;
   }
 

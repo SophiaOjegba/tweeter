@@ -34,7 +34,7 @@
       <div class="nav-bar">
       <span>tweeter</span>
       <div class="nav-new-tweet">
-      <p>Write a new tweet</p>
+      <button type="button" class="nav-button"><strong>Write</strong> a new tweet</button><br>
       <i class="fas fa-angle-double-down" id="nav-icon"></i>
     </div>
     </div>
@@ -50,10 +50,10 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <p class="error-message"></p>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
           <form action="/tweets" method="post">
-           
             <label for="tweet-text"></label>
             <textarea name="text" id="tweet-text" class="new-tweet-textarea" placeholder="What are you humming about?"></textarea>
         
@@ -64,26 +64,6 @@
           </form><br>
       </section>
       <section class="tweet-container">
-        <!-- <article class="tweetArticle">
-          <header class="old-tweets-header">
-            <div class="profile-picture">
-            <img src="https://i.imgur.com/73hZDYK.png" alt="avatar-isaac">
-            <p>Newton</p>   
-            </div>      
-            <p id="profile-name">@SirIsaac</p>
-          
-          </header>
-            <p id="tweet-text" class="new-tweet-textarea">If I have seen further, it is by standing on the shoulder of giants.</p>
-        
-          <footer class="old-tweets-footer">
-            <p id="formattedTime"></p>
-            <div>
-            <i class="fa-solid fa-flag" id="tweet-icons"></i>
-            <i class="fa-solid fa-retweet" id="tweet-icons"></i>
-            <i class="fa-solid fa-heart" id="tweet-icons"></i>
-            </div>
-          </footer>
-        </article><br> -->
       </section>
 
    

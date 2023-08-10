@@ -43,6 +43,10 @@ body {
   padding-bottom: 0;
 }
 
+.tweetArticle :hover {
+  box-shadow: 5px 5px 1px 4px rgb(166, 168, 169)
+}
+
  #profile-name {
   color: rgb(166, 162, 162);
  }
@@ -70,4 +74,10 @@ body {
  .profile-picture {
   display: flex;
   gap: 5px;
+ }
+
+ .error-message {
+  border: 4px solid red;
+  padding: 0.2em;
+  color: red;
  }

@@ -11,9 +11,14 @@ nav span {
   font-family: bungee;
 }
 
-nav p {
+nav button {
   float: right;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: whitesmoke;
 }
+
 .nav-new-tweet{
   display: flex;
   flex-direction: column;
