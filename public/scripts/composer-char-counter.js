@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   $("#tweet-text").on("input", function (){
     const count = $(this).siblings().find(".counter")
     let inputCount = 140 - $("#tweet-text").val().length;

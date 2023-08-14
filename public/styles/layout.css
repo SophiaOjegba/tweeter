@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,33 +14,27 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: sans-serif;
-  
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 body {
   padding-top: 150px;
 }
 
- .container{
+.container {
   width: 90%;
   background-color: #f4f1ec;
   margin: 0 auto;
- }
+}
 
- .tweet-container {
+.tweet-container {
   padding: 1.5em;
   padding-bottom: 0;
- }
+}
 
 .tweetArticle {
   border: 2px solid #000306;
@@ -48,41 +43,40 @@ body {
 }
 
 .tweetArticle:hover {
-  box-shadow: 5px 5px 1px 4px rgb(166, 168, 169)
+  box-shadow: 5px 5px 1px 4px rgb(166, 168, 169);
 }
 
- #profile-name {
+#profile-name {
   color: rgb(166, 162, 162);
- }
+}
 
 .tweet-container:hover {
- box-shadow: 10px 10px 3px 9px rgb(166, 168, 169)
+  box-shadow: 10px 10px 3px 9px rgb(166, 168, 169);
 }
 
- .tweet-header {
+.tweet-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
- }
- .tweet-footer {
+.tweet-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
- }
+}
 
- #tweet-icons:hover {
- color: cadetblue;
- }
+#tweet-icons:hover {
+  color: cadetblue;
+}
 
- .profile-picture {
+.profile-picture {
   display: flex;
   gap: 5px;
- }
+}
 
- .error-message {
+.error-message {
   border: 4px solid red;
   padding: 0.2em;
   color: red;
- }
-
+}
