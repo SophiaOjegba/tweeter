@@ -43,7 +43,7 @@ body {
   padding-bottom: 0;
 }
 
-.tweetArticle :hover {
+.tweetArticle:hover {
   box-shadow: 5px 5px 1px 4px rgb(166, 168, 169)
 }
 
@@ -55,13 +55,13 @@ body {
  box-shadow: 10px 10px 3px 9px rgb(166, 168, 169)
 }
 
- .old-tweets-header {
+ .tweet-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
  }
- .old-tweets-footer {
+ .tweet-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;

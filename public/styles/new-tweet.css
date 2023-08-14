@@ -1,7 +1,7 @@
 .new-tweet {
   margin: 10 auto;
 }
-.new-tweet-textarea {
+.tweet-textarea {
   border: 0;
   border-width: auto;
   border-bottom: 2px solid #000306;
