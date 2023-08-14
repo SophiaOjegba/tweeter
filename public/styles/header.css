@@ -1,7 +1,6 @@
 .Profile{
-  height: 600px;
+  height: 500px;
   width: 100%;
-  padding-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,3 +9,20 @@
   background-color: #878c00;
   background-image: url(http://www.transparenttextures.com/patterns/escheresque-dark.png);
  }
+ 
+  /* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .Profile {
+    width: 30%;
+    float: left;
+    padding: 1.5em;
+    margin-left: 40px;
+  }
+
+  
+  .container {
+    width: 60%;
+    float: right;
+    padding: 1.5em;
+  }
+}

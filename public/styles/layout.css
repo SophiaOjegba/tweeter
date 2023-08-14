@@ -25,11 +25,15 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+body {
+  padding-top: 150px;
+}
+
  .container{
   width: 90%;
   background-color: #f4f1ec;
   margin: 0 auto;
-;
  }
 
  .tweet-container {
@@ -81,3 +85,4 @@ body {
   padding: 0.2em;
   color: red;
  }
+
