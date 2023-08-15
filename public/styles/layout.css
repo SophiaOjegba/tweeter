@@ -50,10 +50,6 @@ body {
   color: rgb(166, 162, 162);
 }
 
-.tweet-container:hover {
-  box-shadow: 10px 10px 3px 9px rgb(166, 168, 169);
-}
-
 .tweet-header {
   display: flex;
   justify-content: space-between;
